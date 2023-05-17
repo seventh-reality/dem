@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TNA AR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+     <div id="card">
+    <!-- <model-viewer> HTML element -->
+    <model-viewer id="TNA" src="TNA.glb" ></model-viewer>
+    <model-viewer id="IITPL" style="display:none" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
+    <model-viewer id="ASSET" style="display:none" src="asset.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
+    <model-viewer id="RING" style="display:none" src="Ring Applicator.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
+    <!-- <a href="https://drive.google.com/file/d/17ENqgYiIehtTJLoKu1tHC5S6sj9mdDCj/view?usp=sharing"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a> -->
+   
+  <!-- <button id="Brochure.png"
+    slot="Brochure.png"
+    data-position="..." data-normal="...">Brochure</button>
+    <button id="reset">Reset</button> -->
+ 
+       
+  
+<div style="margin: 1em 0;text-align: center;">
+  <button onclick="myFunction(1)" id= "TNA.glb">1</button>
+  <button onclick="myFunction(2)" id="iitpl.glb">2</button>
+  <button onclick="myFunction(3)" id="asset.glb">3</button>
+  <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
+</div>
+<!---This toggle button--->
+
+
+    
+
+<script>
+//  Button.addEventListener('click', () => {
+//   if (modelViewer.paused) {
+//     modelViewer.play();
+//   } else {
+//     modelViewer.pause();
+//   }
+// });
+function myFunction(value){
+  document.getElementById("TNA").style.display="none";
+  if(value ==1){
+    document.getElementById("TNA").style.display="block";
+    document.getElementById("IITPL").style.display="none";
+    document.getElementById("ASSET").style.display="none";
+    document.getElementById("RING").style.display="none";
+  }else if(value == 2){
+    document.getElementById("IITPL").style.display="block";
+    document.getElementById("TNA").style.display="none";
+    document.getElementById("ASSET").style.display="none";
+    document.getElementById("RING").style.display="none";
+  }else if(value == 3){
+    document.getElementById("ASSET").style.display="block";
+    document.getElementById("TNA").style.display="none";
+    document.getElementById("IITPL").style.display="none";
+    document.getElementById("RING").style.display="none";
+  }else if(value == 4){
+    document.getElementById("RING").style.display="block";
+    document.getElementById("TNA").style.display="none";
+    document.getElementById("IITPL").style.display="none";
+    document.getElementById("ASSET").style.display="none";
+  }
+}
+</script>
+<!-- </model-viewer> -->
+      
+          <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+     <section class="attributiontwo">
+       <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
+      
+      <span>
+        <a href="https://drive.google.com/file/d/17ENqgYiIehtTJLoKu1tHC5S6sj9mdDCj/view?usp=sharing"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a>
+        <a href="https://drive.google.com/file/d/1qp8oTnwX4qtDK-SBT2PsBxhJ-ilR1idb/view?usp=sharing"><img src="Video.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+        <a href="https://www.jnjmedtech.com/en-US/product/tn-advanced"><img src="web.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+        <a href="http://synthes.vo.llnwd.net/o16/LLNWMB8/US%20Mobile/Synthes%20North%20America/Product%20Support%20Materials/Technique%20Guides/Surgical%20Technique%20Guide%20-%20TN-Advanced%20Tibial%20Nailing%20System-Suprapatellar%20Appooach.pdf"><img src="serch.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSew4D56CSKpONvc30Ay7cLUY6FnPCOs7zK9IPYRLQWQPswbsg/viewform?usp=sf_link"><img src="form.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 20px;padding-top: 0px;"></a>
+            
+      </span>
+   
+    </section>
+      
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
+</html>
