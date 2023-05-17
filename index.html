@@ -13,10 +13,35 @@
   <body>
      <div id="card">
     <!-- <model-viewer> HTML element -->
-    <model-viewer id="TNA" src="TNA.glb" ></model-viewer>
-    <model-viewer id="IITPL" style="display:none" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
-    <model-viewer id="ASSET" style="display:none" src="asset.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
-    <model-viewer id="RING" style="display:none" src="Ring Applicator.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"></model-viewer>
+    <model-viewer id="TNA" src="TNA.glb" >
+      <div style="margin: 1em 0;text-align: center;">
+        <button onclick="myFunction(1)" id= "TNA.glb">1</button>
+        <button onclick="myFunction(2)" id="iitpl.glb">2</button>
+        <button onclick="myFunction(3)" id="asset.glb">3</button>
+        <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
+      </div>
+    </model-viewer>
+    <model-viewer id="IITPL" style="display:none" src="iitpl.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <div style="margin: 1em 0;text-align: center;">
+        <button onclick="myFunction(1)" id= "TNA.glb">1</button>
+        <button onclick="myFunction(2)" id="iitpl.glb">2</button>
+        <button onclick="myFunction(3)" id="asset.glb">3</button>
+        <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
+      </div></model-viewer>
+    <model-viewer id="ASSET" style="display:none" src="asset.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <div style="margin: 1em 0;text-align: center;">
+        <button onclick="myFunction(1)" id= "TNA.glb">1</button>
+        <button onclick="myFunction(2)" id="iitpl.glb">2</button>
+        <button onclick="myFunction(3)" id="asset.glb">3</button>
+        <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
+      </div></model-viewer>
+    <model-viewer id="RING" style="display:none" src="Ring Applicator.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <div style="margin: 1em 0;text-align: center;">
+        <button onclick="myFunction(1)" id= "TNA.glb">1</button>
+        <button onclick="myFunction(2)" id="iitpl.glb">2</button>
+        <button onclick="myFunction(3)" id="asset.glb">3</button>
+        <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
+      </div></model-viewer>
     <!-- <a href="https://drive.google.com/file/d/17ENqgYiIehtTJLoKu1tHC5S6sj9mdDCj/view?usp=sharing"><img src="Brochure.png" id="youtube-icon" align="center" style="width:30px;height:40px; padding-left: 17px;padding-top: 0px;"></a> -->
    
   <!-- <button id="Brochure.png"
@@ -26,12 +51,7 @@
  
        
   
-<div style="margin: 1em 0;text-align: center;">
-  <button onclick="myFunction(1)" id= "TNA.glb">1</button>
-  <button onclick="myFunction(2)" id="iitpl.glb">2</button>
-  <button onclick="myFunction(3)" id="asset.glb">3</button>
-  <button onclick="myFunction(4)" id="Ring Applicator.glb">4</button>
-</div>
+
 <!---This toggle button--->
 
 
@@ -76,9 +96,9 @@ function myFunction(value){
           <div class="update-bar"></div>
       </div>
       
-      <div id="ar-prompt">
+      <!-- <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
-      </div>
+      </div> -->
     </model-viewer>
      <section class="attributiontwo">
        <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
